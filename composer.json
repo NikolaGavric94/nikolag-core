@@ -27,6 +27,7 @@
             "Nikolag\\Core\\Facades\\": "src/facades",
             "Nikolag\\Core\\Models\\": "src/models",
             "Nikolag\\Core\\Providers\\": "src/providers",
+            "Nikolag\\Core\\Traits\\": "src/traits",
             "Nikolag\\Core\\Utils\\": "src/utils"
         }
     },
@@ -39,6 +40,7 @@
             "Nikolag\\Core\\Facades\\": "src/facades",
             "Nikolag\\Core\\Models\\": "src/models",
             "Nikolag\\Core\\Providers\\": "src/providers",
+            "Nikolag\\Core\\Traits\\": "src/traits",
             "Nikolag\\Core\\Utils\\": "src/utils"
         }
     },
