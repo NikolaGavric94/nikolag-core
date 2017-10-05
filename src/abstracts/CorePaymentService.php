@@ -1,7 +1,6 @@
 <?php
 namespace Nikolag\Core\Abstracts;
 
-use Nikolag\Core\Contracts\ConfigContract;
 use Nikolag\Core\Traits\Arrayable;
 use Nikolag\Core\Traits\Jsonable;
 

@@ -19,30 +19,33 @@ class CoreService extends CoreConfig
 
     /**
      * Returns the specified service
-     * 
-     * @param string $driver 
+     *
+     * @param string $driver
      * @return CorePaymentService
      */
-    public function use(string $driver) {
+    public function use(string $driver)
+    {
         return resolve($this->drivers->{$driver}->namespace);
     }
 
     /**
      * Returns the default service
-     * 
+     *
      * @return CorePaymentService
      */
-    public function default() {
+    public function default()
+    {
         return resolve($this->drivers->{$this->getConfigAsJson()->default}->namespace);
     }
 
     /**
      * Returns all available drivers
      * which u have installed.
-     * 
+     *
      * @return array
      */
-    public function availableDrivers() {
+    public function availableDrivers()
+    {
         return array_keys($this->drivers);
     }
 }
