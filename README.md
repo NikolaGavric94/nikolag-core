@@ -3,7 +3,7 @@ nikolag/core
 Core package for building additional payment gateway integrations with `nikolag` packages and `Laravel 5.5`
 
 ## Installation guide
-`composer require nikolag/core`
+`composer require nikolag/core --dev`
 
 ---
 
@@ -171,8 +171,69 @@ tests/
 ### 10. Utility classes
 All your utility classes must be under `src/utils` folder.
 
+## All available core methods
+
+### CoreService
+```javascript
+/**
+ * Returns instance of the specified service
+ *
+ * @param string $driver
+ * @return Nikolag\Core\Contracts\PaymentServiceContract
+ */
+public function use(string $driver) {}
+
+/**
+ * Returns instance of the default service
+ *
+ * @return Nikolag\Core\Contracts\PaymentServiceContract
+ */
+public function default() {}
+
+/**
+ * Returns all available drivers
+ * which u have installed.
+ *
+ * @return array
+ */
+public function availableDrivers() {}
+```
+
+**CoreService examples**
+
+Get access to the specific underyling driver for any installed payment API
+```javascript
+$squareAPI = Nikolag\Core\Facades\CoreService::use('square');
+$squareAPI->setCustomer($customer)->charge($options);
+
+//or
+
+$myServiceAPI = Nikolag\Core\Facades\CoreService::use('my-service');
+$myServiceAPI->setCustomer($customer)->charge($options);
+```
+
+You can also charge the customer with your default driver
+```javascript
+$api = Nikolag\Core\Facades\CoreService::default();
+
+$api->setCustomer($customer)->charge($options);
+```
+
+You can also list all available drivers
+```javascript
+$drivers = Nikolag\Core\Facades\CoreService::availableDrivers();
+
+echo json_decode(json_encode($drivers));
+//or Laravel specific helper method
+dd($drivers);
+
+//or plain php
+var_dump($drivers);
+die();
+```
+
 ## More examples
-For a more complete example you can take a look at this [repository](https://github.com/NikolaGavric94/nikolag-square).
+For a more complete example you can take a look at this [repository](https://github.com/NikolaGavric94/nikolag-core-impl).
 
 ## Contributing
 Everyone is welcome to contribute to this repository, simply open up an issue

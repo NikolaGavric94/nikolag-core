@@ -15,4 +15,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Core configuration
 - Ability to switch drivers on the fly
 
-[Unreleased]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.0...HEAD
+## [1.0.1] - 2017-10-06
+### Added
+- Added more examples for core service usage
+
+### Changed
+- Code cleanup
+- Updated README.md with [all available core methods](https://github.com/NikolaGavric94/nikolag-core#all-available-core-methods)
+
+### Fixed
+- Issue with using incorrect namespace for Constants inside of migrations file
+
+[Unreleased]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.0...v1.0.1
