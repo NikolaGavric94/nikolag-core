@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated README.md with [all available core methods](https://github.com/NikolaGavric94/nikolag-core#all-available-core-methods)
 
 ### Fixed
+- Issue with wrong root class of previous Exception inside of Nikolag\Core\Exception constructor
 - Issue with incorrect constants
 - Issue with using incorrect namespace for Constants inside of migrations file
 
