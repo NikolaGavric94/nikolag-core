@@ -11,19 +11,16 @@ Core package for building additional payment gateway integrations with `nikolag`
 This package contains all of the necessary code to get you started with building the additional integrations of payment gateways
 with `nikolag` packages. First of all there are couple of important layers and structure that you must follow:
 
-```javascript
-1. Configuration file
-2. Main service
-2. DI (Dependency Injections)
-3. Migrations and Factories
-4. Custom Exceptions
-5. Facades
-6. Models
-7. Providers
-8. Traits
-9. Tests
-10. Utility classes
-```
+1. [Configuration file](#1-configuration-file) 
+2. [Main service](#2-main-service) 
+3. [Dependency Injections](#3-dependency-injections) 
+4. [Migrations and Factories](#4-migrations-and-factories) 
+5. [Facades](#5-facades) 
+6. [Models](#6-models) 
+7. [Providers](#7-providers) 
+8. [Traits](#8-traits) 
+9. [Tests](#9-tests) 
+10. [Utility classes](#10-utility-classes) 
 
 ### 1. Configuration file
 Configuration file is the most important here since it'll contain all of the required pre-set options of your library.
@@ -115,7 +112,7 @@ Your package must have at least 1 main service which is responsible for all comm
 It also must extend `Nikolag\Core\Abstracts\CorePaymentService` and it must implement the contract thats explained below. 
 Example of that kind of class can be found [here](https://github.com/NikolaGavric94/nikolag-square/blob/master/src/SquareService.php).
 
-### 3. DI (Dependency Injections)
+### 3. Dependency Injections
 Your library must have at least 1 contract which should be named `{$serviceName}ServiceContract.php` where `{$serviceName}` is the name of service you are trying to integrate with nikolag packages and Laravel 5.5. 
 Also it must extends `Nikolag\Core\Contracts\PaymentServiceContract`. 
 Any other contract which is not connected with your service file in any way mustn't extend the above contract. Some examples of such name are `PaypalServiceContract.php`, `PayeerServiceContract.php`, `PayoneerServiceContract.php`. 
@@ -125,19 +122,14 @@ Example of the contract can be found [here](https://github.com/NikolaGavric94/ni
 All migrations and factories must be under `src/database` folder and each of them respectively will have it's own subfolder `src/database/factories` and `src/database/migrations`. 
 This core package already has couple of migrations so you don't have to write them yourself, but you can extend on them if necessary.
 
-### 5. Custom Exceptions
-All package custom exceptions are found under `src/exceptions` and each exception must extend `Nikolag\Core\Exceptions\Exception` instead of php `\Exception` class. 
-
-If you wish to register your own exception handler you can do so by creating a handler like [here](https://github.com/NikolaGavric94/nikolag-square/blob/master/src/ExceptionHandler.php) and adding it inside of your `ExceptionServiceProvider` like [so](https://github.com/NikolaGavric94/nikolag-square/blob/master/src/providers/ExceptionServiceProvider.php).
-
-### 6. Facades
+### 5. Facades
 All facades are found under `src/facades` and your package must have at least 1 facade which must be alias for your main service class. 
 ```javascript
 //Facades
 $this->app->alias(SquareService::class, 'square');
 ```
 
-### 7. Models
+### 6. Models
 All models must be located under `src/models`. There are 2 core models: `Customer` and `Translation`. 
 
 You must extend those 2 core models and create your own from them with all relationships available and also add
@@ -155,6 +147,10 @@ protected $attributes = [
 ```
 The above is only required for 2 base models, any other models u might make don't have to extend anything and you can create them normally. 
 Example can be found [here](https://github.com/NikolaGavric94/nikolag-square/blob/master/src/models/Customer.php).
+
+### 7. Providers
+You can register multiple providers and they should be named respectively for their role in the library. You can find them under src/providers folder. Here are some examples:
+**ExceptionServiceProvider, MyServiceProvider, ExternalLibrariesProvider, etc..**
 
 ### 8. Traits
 All traits must be under `src/traits`.
