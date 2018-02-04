@@ -32,5 +32,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Issue with incorrect constants
 - Issue with using incorrect namespace for Constants inside of migrations file
 
-[Unreleased]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.1...HEAD
+## [1.0.2] - 2017-10-16
+### Fixed
+- Issue with migration file `nikolag_customers`, type string can't be unsigned, typo
+
+[Unreleased]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.0...v1.0.1
