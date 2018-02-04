@@ -35,8 +35,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.1.0] - 2018-02-04
 ### Added
 - Support for order system
+- Support for products system
 - Support for tax system
 - Support for discounts system
+
+### Changed
+- Updated README.md with [service_payment_id](https://github.com/NikolaGavric94/nikolag-core#1-configuration-file) property in config file.
 
 [Unreleased]: https://github.com/NikolaGavric94/laravel-square/compare/v1.1.0...HEAD
 [1.1.0]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.2...v1.1.0
