@@ -4,14 +4,21 @@ namespace Nikolag\Core\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Customer extends Model
+class Product extends Model
 {
     /**
+     * Transient attributes
+     * 
+     * @var int
+     */
+    public $quantity;
+    
+	/**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = "nikolag_customers";
+    protected $table = "nikolag_products";
 
     /**
      * Indicates if the model should be timestamped.
@@ -36,13 +43,16 @@ class Customer extends Model
      * @var array
      */
     protected $fillable = [
-        'first_name',
-        'last_name',
-        'company_name',
-        'nickname',
-        'email',
-        'phone',
-        'note'
+    	'name', 'price', 'variation_name', 'note', 'reference_id'
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'price' => 'float'
     ];
 
     /**
@@ -52,7 +62,6 @@ class Customer extends Model
      */
     protected $guarded = [
         'id',
-        'payment_service_id',
-        'owner_id'
+        'reference_id'
     ];
 }

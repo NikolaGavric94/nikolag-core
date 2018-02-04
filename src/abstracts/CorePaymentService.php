@@ -17,6 +17,10 @@ abstract class CorePaymentService
      */
     protected $merchant;
     /**
+     * @var mixed
+     */
+    protected $order;
+    /**
      * @var array
      */
     protected $config;
@@ -59,6 +63,14 @@ abstract class CorePaymentService
         $this->merchant = $merchant;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOrder()
+    {
+        return $this->order;
     }
 
     /**

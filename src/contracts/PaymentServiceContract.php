@@ -53,6 +53,12 @@ interface PaymentServiceContract
      */
     public function setMerchant($merchant);
     /**
+     * Getter for order.
+     *
+     * @return mixed
+     */
+    public function getOrder();
+    /**
      * Getter for config.
      *
      * @return array
