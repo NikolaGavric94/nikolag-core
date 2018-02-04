@@ -97,7 +97,8 @@ return [
         */
         'order' => [
           'namespace' => env('{$default}_ORDER_NAMESPACE', '\App\Order'),
-          'identifier' => env('{$default}_ORDER_IDENTIFIER', 'id')
+          'identifier' => env('{$default}_ORDER_IDENTIFIER', 'id'),
+          'service_identifier' => env('SQUARE_PAYMENT_IDENTIFIER', 'payment_service_id')
         ]
       ],
     ]
@@ -229,7 +230,7 @@ die();
 ```
 
 ## More examples
-For a complete example of how to build upon this core package you can take a look at [nikolag-core-starter](https://github.com/NikolaGavric94/nikolag-core-impl) repository.
+For a complete example of how to build upon this core package you can take a look at [nikolag-core-starter](https://github.com/NikolaGavric94/nikolag-core-impl)
 
 ## Contributing
 Everyone is welcome to contribute to this repository, simply open up an issue
