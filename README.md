@@ -237,6 +237,11 @@ Everyone is welcome to contribute to this repository, simply open up an issue
 and label the request, whether it is an issue, bug or a feature. For any other
 enquiries send an email to nikola.gavric94@gmail.com
 
+### Contributors
+| Name                                               | Changes                                                                                                                       | Date       |
+| -------------------------------------------------- |:-----------------------------------------------------------------------------------------------------------------------------:|:----------:|
+| [@viangela84](https://github.com/viangela84) | Updated order_product table [pull request #3](https://github.com/NikolaGavric94/nikolag-core/pull/3) | 2017-02-07 |
+
 ## License
 MIT License
 
