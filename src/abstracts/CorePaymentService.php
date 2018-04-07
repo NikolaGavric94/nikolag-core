@@ -1,4 +1,5 @@
 <?php
+
 namespace Nikolag\Core\Abstracts;
 
 use Nikolag\Core\Traits\Arrayable;

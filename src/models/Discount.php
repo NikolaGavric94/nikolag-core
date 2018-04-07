@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Discount extends Model
 {
-	/**
+    /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = "nikolag_discounts";
+    protected $table = 'nikolag_discounts';
 
     /**
      * Indicates if the model should be timestamped.
@@ -27,7 +27,7 @@ class Discount extends Model
      */
     protected $dates = [
         'created_at',
-        'updated_at'
+        'updated_at',
     ];
 
     /**
@@ -36,7 +36,7 @@ class Discount extends Model
      * @var array
      */
     protected $fillable = [
-    	'name', 'amount', 'percentage', 'reference_id'
+        'name', 'amount', 'percentage', 'reference_id',
     ];
 
     /**
@@ -45,7 +45,7 @@ class Discount extends Model
      * @var array
      */
     protected $casts = [
-        'amount' => 'integer'
+        'amount' => 'integer',
     ];
 
     /**
@@ -55,6 +55,6 @@ class Discount extends Model
      */
     protected $guarded = [
         'id',
-        'reference_id'
+        'reference_id',
     ];
 }
