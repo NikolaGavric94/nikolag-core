@@ -1,6 +1,6 @@
 nikolag/core
 =========
-Core package for building additional payment gateway integrations with `nikolag` packages and `Laravel 5.5`
+Core package for building additional payment gateway integrations with `nikolag` packages and `Laravel 5.6`
 
 ## Installation guide
 `composer require nikolag/core`
