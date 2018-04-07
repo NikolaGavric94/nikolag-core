@@ -1,10 +1,12 @@
 <?php
+
 namespace Nikolag\Core\Traits;
 
-trait Jsonable {
-	/**
-     * Returns config as json
-     * 
+trait Jsonable
+{
+    /**
+     * Returns config as json.
+     *
      * @return object
      */
     public function getConfigAsJson()

@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateNikolagCustomersTable extends Migration
 {
@@ -13,7 +13,7 @@ class CreateNikolagCustomersTable extends Migration
      */
     public function up()
     {
-        Schema::create('nikolag_customers', function(Blueprint $table) {
+        Schema::create('nikolag_customers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('payment_service_id')->nullable();
             $table->string('payment_service_type', 25);
@@ -27,7 +27,7 @@ class CreateNikolagCustomersTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('nikolag_customers', function(Blueprint $table) {
+        Schema::table('nikolag_customers', function (Blueprint $table) {
             $table->unique(['payment_service_type', 'payment_service_id']);
             $table->index('email');
         });
