@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Nikolag\Core\Utils\Constants;
 
 class CreateNikolagProductOrderTable extends Migration
 {
@@ -20,7 +19,7 @@ class CreateNikolagProductOrderTable extends Migration
             $table->string('order_id', 25);
             $table->integer('quantity')->unsigned()->default(1);
         });
-        
+
         Schema::table('nikolag_product_order', function (Blueprint $table) {
             $table->foreign('product_id')->references('id')->on('nikolag_products');
             $table->unique(['product_id', 'order_id']);

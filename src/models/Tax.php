@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tax extends Model
 {
-	/**
+    /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = "nikolag_taxes";
+    protected $table = 'nikolag_taxes';
 
     /**
      * Indicates if the model should be timestamped.
@@ -27,7 +27,7 @@ class Tax extends Model
      */
     protected $dates = [
         'created_at',
-        'updated_at'
+        'updated_at',
     ];
 
     /**
@@ -36,7 +36,7 @@ class Tax extends Model
      * @var array
      */
     protected $fillable = [
-    	'name', 'type', 'percentage', 'reference_id'
+        'name', 'type', 'percentage', 'reference_id',
     ];
 
     /**
@@ -45,7 +45,7 @@ class Tax extends Model
      * @var array
      */
     protected $casts = [
-        'percentage' => 'float'
+        'percentage' => 'float',
     ];
 
     /**
@@ -55,6 +55,6 @@ class Tax extends Model
      */
     protected $guarded = [
         'id',
-        'reference_id'
+        'reference_id',
     ];
 }

@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-	/**
+    /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = "nikolag_products";
+    protected $table = 'nikolag_products';
 
     /**
      * Indicates if the model should be timestamped.
@@ -27,7 +27,7 @@ class Product extends Model
      */
     protected $dates = [
         'created_at',
-        'updated_at'
+        'updated_at',
     ];
 
     /**
@@ -36,7 +36,7 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-    	'name', 'price', 'variation_name', 'note', 'reference_id'
+        'name', 'price', 'variation_name', 'note', 'reference_id',
     ];
 
     /**
@@ -45,7 +45,7 @@ class Product extends Model
      * @var array
      */
     protected $casts = [
-        'price' => 'float'
+        'price' => 'float',
     ];
 
     /**
@@ -55,6 +55,6 @@ class Product extends Model
      */
     protected $guarded = [
         'id',
-        'reference_id'
+        'reference_id',
     ];
 }

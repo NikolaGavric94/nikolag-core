@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Nikolag\Core\Utils\Constants;
 
 class CreateNikolagProductsTable extends Migration
 {
