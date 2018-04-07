@@ -14,8 +14,8 @@ class CreateNikolagDeductibleTable extends Migration
     public function up()
     {
         Schema::create('nikolag_deductibles', function (Blueprint $table) {
-            $table->morphs('deductible', 'nikolag_deductibles');
-            $table->morphs('featurable', 'nikolag_featurables');
+            $table->morphs('deductible', 'nikolag_deductibles_index');
+            $table->morphs('featurable', 'nikolag_featurables_index');
         });
     }
 
