@@ -2,8 +2,6 @@
 
 namespace Nikolag\Core;
 
-use Nikolag\Core\CoreConfig;
-
 class CoreService extends CoreConfig
 {
     /**
@@ -18,9 +16,10 @@ class CoreService extends CoreConfig
     }
 
     /**
-     * Returns instance of the specified service
+     * Returns instance of the specified service.
      *
      * @param string $driver
+     *
      * @return Nikolag\Core\Contracts\PaymentServiceContract
      */
     public function use(string $driver)
@@ -29,7 +28,7 @@ class CoreService extends CoreConfig
     }
 
     /**
-     * Returns instance of the default service
+     * Returns instance of the default service.
      *
      * @return Nikolag\Core\Contracts\PaymentServiceContract
      */

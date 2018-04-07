@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaction extends Model
 {
-	/**
+    /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = "nikolag_transactions";
+    protected $table = 'nikolag_transactions';
 
     /**
      * Indicates if the model should be timestamped.
@@ -27,7 +27,7 @@ class Transaction extends Model
      */
     protected $dates = [
         'created_at',
-        'updated_at'
+        'updated_at',
     ];
 
     /**
@@ -36,7 +36,7 @@ class Transaction extends Model
      * @var array
      */
     protected $fillable = [
-    	'status', 'amount'
+        'status', 'amount',
     ];
 
     /**
@@ -47,6 +47,6 @@ class Transaction extends Model
     protected $guarded = [
         'id',
         'reference_id',
-        'reference_type'
+        'reference_type',
     ];
 }

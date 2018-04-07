@@ -1,7 +1,6 @@
 <?php
-namespace Nikolag\Core\Exceptions;
 
-use Nikolag\Core\Exceptions\Exception;
+namespace Nikolag\Core\Exceptions;
 
 class InvalidConfigurationException extends Exception
 {
