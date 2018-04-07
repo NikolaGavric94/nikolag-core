@@ -3,7 +3,6 @@
 namespace Nikolag\Core\Models;
 
 use Illuminate\Database\Eloquent\Relations\MorphPivot;
-use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class OrderProductPivot extends MorphPivot
 {
@@ -12,7 +11,7 @@ class OrderProductPivot extends MorphPivot
      *
      * @var string
      */
-    protected $table = "nikolag_product_order";
+    protected $table = 'nikolag_product_order';
 
     /**
      * Indicates if the model should be timestamped.
@@ -27,7 +26,7 @@ class OrderProductPivot extends MorphPivot
      * @var array
      */
     protected $fillable = [
-    	'quantity'
+        'quantity',
     ];
 
     /**
@@ -36,6 +35,6 @@ class OrderProductPivot extends MorphPivot
      * @var array
      */
     protected $guarded = [
-        'id'
+        'id',
     ];
 }

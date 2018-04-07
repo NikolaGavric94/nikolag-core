@@ -11,7 +11,7 @@ class Customer extends Model
      *
      * @var string
      */
-    protected $table = "nikolag_customers";
+    protected $table = 'nikolag_customers';
 
     /**
      * Indicates if the model should be timestamped.
@@ -27,7 +27,7 @@ class Customer extends Model
      */
     protected $dates = [
         'created_at',
-        'updated_at'
+        'updated_at',
     ];
 
     /**
@@ -42,7 +42,7 @@ class Customer extends Model
         'nickname',
         'email',
         'phone',
-        'note'
+        'note',
     ];
 
     /**
@@ -52,6 +52,6 @@ class Customer extends Model
      */
     protected $guarded = [
         'id',
-        'payment_service_id'
+        'payment_service_id',
     ];
 }

@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Nikolag\Core\Utils\Constants;
 
 class CreateNikolagTransactionsTable extends Migration
 {
@@ -14,7 +13,7 @@ class CreateNikolagTransactionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('nikolag_transactions', function(Blueprint $table) {
+        Schema::create('nikolag_transactions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('status', 50);
             $table->string('amount');
@@ -25,7 +24,7 @@ class CreateNikolagTransactionsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('nikolag_transactions', function(Blueprint $table) {
+        Schema::table('nikolag_transactions', function (Blueprint $table) {
             $table->index('status');
             $table->index('payment_service_type');
             $table->foreign('customer_id')->references('id')->on('nikolag_customers');

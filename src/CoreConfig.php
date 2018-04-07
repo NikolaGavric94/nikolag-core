@@ -25,15 +25,17 @@ class CoreConfig
      * Check validity of configuration file.
      *
      * @param mixed $config
+     *
      * @throws InvalidConfigurationException if the config provided is empty or not
-     * complete
+     *                                       complete
+     *
      * @return void
      */
     final public function checkConfigValidity($config)
     {
         if (empty($config) || !isset($config)) {
             throw new InvalidConfigurationException(
-                "Configuration file is missing or not complete",
+                'Configuration file is missing or not complete',
                 500
             );
         }

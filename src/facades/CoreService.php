@@ -1,4 +1,5 @@
 <?php
+
 namespace Nikolag\Core\Facades;
 
 use Illuminate\Support\Facades\Facade;
