@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Issue with migration file `nikolag_customers`, type string can't be unsigned, typo
 
-## [1.1.0] - 2018-02-04
+## [2.0.0] - 2018-04-07
 ### Added
 - Support for order system
 - Support for products system
@@ -42,7 +42,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Updated README.md with [service_payment_id](https://github.com/NikolaGavric94/nikolag-core#1-configuration-file) property in config file.
 
-[Unreleased]: https://github.com/NikolaGavric94/laravel-square/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/NikolaGavric94/laravel-square/compare/v2.0.0...HEAD
 [1.1.0]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.0...v1.0.1
+[2.0.0]: https://github.com/NikolaGavric94/laravel-square/compare/v1.0.1...v2.0.0

@@ -52,7 +52,6 @@ class Customer extends Model
      */
     protected $guarded = [
         'id',
-        'payment_service_id',
-        'owner_id'
+        'payment_service_id'
     ];
 }

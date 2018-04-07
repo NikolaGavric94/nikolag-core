@@ -20,7 +20,14 @@ class CreateNikolagTaxesTable extends Migration
             $table->string('type');
             $table->float('percentage');
             $table->string('reference_id', 25)->nullable();
+            $table->string('reference_type')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('nikolag_taxes', function (Blueprint $table) {
+            $table->index('name');
+            $table->index('type');
+            $table->unique(['name', 'type']);
         });
     }
 

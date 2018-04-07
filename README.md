@@ -3,7 +3,7 @@ nikolag/core
 Core package for building additional payment gateway integrations with `nikolag` packages and `Laravel 5.5`
 
 ## Installation guide
-`composer require nikolag/core --dev`
+`composer require nikolag/core`
 
 ---
 
@@ -245,7 +245,7 @@ enquiries send an email to nikola.gavric94@gmail.com
 ## License
 MIT License
 
-Copyright (c) 2017
+Copyright (c) 2018
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

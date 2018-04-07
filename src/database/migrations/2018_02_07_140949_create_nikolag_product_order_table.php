@@ -15,14 +15,14 @@ class CreateNikolagProductOrderTable extends Migration
     public function up()
     {
         Schema::create('nikolag_product_order', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('product_id')->unsigned();
-            $table->integer('order_id')->unsigned();
-            $table->integer('quantity')->unsigned();
+            $table->string('order_id', 25);
+            $table->integer('quantity')->unsigned()->default(1);
         });
         
         Schema::table('nikolag_product_order', function (Blueprint $table) {
             $table->foreign('product_id')->references('id')->on('nikolag_products');
-            $table->foreign('order_id')->references('id')->on('nikolag_orders');
             $table->unique(['product_id', 'order_id']);
         });
     }

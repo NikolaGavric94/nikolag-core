@@ -15,7 +15,7 @@ class CreateNikolagCustomersTable extends Migration
     {
         Schema::create('nikolag_customers', function(Blueprint $table) {
             $table->increments('id');
-            $table->integer('payment_service_id')->unsigned();
+            $table->string('payment_service_id')->nullable();
             $table->string('payment_service_type', 25);
             $table->string('first_name')->nullable()->default(null);
             $table->string('last_name')->nullable()->default(null);
@@ -24,7 +24,6 @@ class CreateNikolagCustomersTable extends Migration
             $table->string('email')->unique();
             $table->string('phone')->nullable()->default(null);
             $table->longText('note')->nullable()->default(null);
-            $table->string('owner_id')->nullable()->default(null);
             $table->timestamps();
         });
 

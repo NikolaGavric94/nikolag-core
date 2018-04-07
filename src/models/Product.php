@@ -6,13 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    /**
-     * Transient attributes
-     * 
-     * @var int
-     */
-    public $quantity;
-    
 	/**
      * The table associated with the model.
      *

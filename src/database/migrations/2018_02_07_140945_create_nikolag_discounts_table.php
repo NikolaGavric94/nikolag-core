@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Nikolag\Core\Utils\Constants;
 
-class CreateNikolagProductsTable extends Migration
+class CreateNikolagDiscountsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,14 +14,18 @@ class CreateNikolagProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('nikolag_products', function (Blueprint $table) {
+        Schema::create('nikolag_discounts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 100);
-            $table->string('variation_name', 100);
-            $table->string('note', 50);
-            $table->float('price');
+            $table->string('name');
+            $table->float('percentage')->nullable();
+            $table->integer('amount')->nullable();
             $table->string('reference_id', 25)->nullable();
+            $table->string('reference_type')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('nikolag_discounts', function (Blueprint $table) {
+            $table->index('name');
         });
     }
 
@@ -32,6 +36,6 @@ class CreateNikolagProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nikolag_products');
+        Schema::dropIfExists('nikolag_discounts');
     }
 }

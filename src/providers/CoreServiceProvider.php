@@ -29,6 +29,8 @@ class CoreServiceProvider extends ServiceProvider
         $this->app->singleton(CoreConfig::class, function($app) {
             return new CoreConfig();
         });
+
+        //Facade
         $this->app->alias(CoreService::class, 'core-service');
     }
 }

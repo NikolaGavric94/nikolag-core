@@ -17,9 +17,8 @@ class CoreConfig
 
     public function __construct()
     {
-        $config = config('nikolag');
-        $this->checkConfigValidity($config);
-        $this->config = $config;
+        $this->config = config('nikolag');
+        $this->checkConfigValidity($this->config);
     }
 
     /**
