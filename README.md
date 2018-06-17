@@ -1,6 +1,6 @@
 nikolag/core
 =========
-Core package for building additional payment gateway integrations with `nikolag` packages and `Laravel 5.6`
+Core package for building additional payment gateway integrations with `nikolag` packages and `Laravel >=5.5`
 
 ## Installation guide
 `composer require nikolag/core`
@@ -114,7 +114,7 @@ It also must extend **Nikolag\Core\Abstracts\CorePaymentService** and it must im
 Example of that kind of class can be found [SquareService.php](https://github.com/NikolaGavric94/laravel-square/blob/master/src/SquareService.php).
 
 ### 3. Dependency Injections
-Your library must have at least 1 contract which should be named `{$serviceName}ServiceContract.php` where `{$serviceName}` is the name of service you are trying to integrate with nikolag packages and Laravel 5.5. 
+Your library must have at least 1 contract which should be named `{$serviceName}ServiceContract.php` where `{$serviceName}` is the name of service you are trying to integrate with nikolag packages and Laravel
 Also it must extends **Nikolag\Core\Contracts\PaymentServiceContract**. 
 **Any other contract which is not connected with your service file in any way mustn't extend the above contract**. Some examples of such name are `PaypalServiceContract.php`, `PayeerServiceContract.php`, `PayoneerServiceContract.php`. 
 Example of the contract can be found [SquareContract.php](https://github.com/NikolaGavric94/laravel-square/blob/master/src/contracts/SquareContract.php).
@@ -141,7 +141,7 @@ You must extend those 2 core models and create your own from them with all relat
  * @var array
  */
 protected $attributes = [
-  //where `{$serviceName}` is the name of service you are trying to integrate with nikolag packages and Laravel 5.5.
+  //where `{$serviceName}` is the name of service you are trying to integrate with nikolag packages and Laravel
   //example: 'paypal', 'payoneer', 'payeer'
   'payment_service_type' => {$serviceName}
 ];
