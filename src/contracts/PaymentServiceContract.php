@@ -16,9 +16,9 @@ interface PaymentServiceContract
      *
      * @param array $options
      *
-     * @throws \Nikolag\Square\Exception on non-2xx response
+     * @throws \Nikolag\Core\Exceptions\Exception on non-2xx response
      *
-     * @return \Nikolag\Square\Models\Transaction
+     * @return \Nikolag\Core\Models\Transaction
      */
     public function charge(array $options);
 
@@ -27,7 +27,7 @@ interface PaymentServiceContract
      *
      * @param array $options
      *
-     * @throws \Nikolag\Square\Exception on non-2xx response
+     * @throws \Nikolag\Core\Exceptions\Exception on non-2xx response
      *
      * @return \SquareConnect\Model\ListLocationsResponse
      */

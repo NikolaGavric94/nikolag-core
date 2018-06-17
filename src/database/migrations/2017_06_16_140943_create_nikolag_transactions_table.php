@@ -17,7 +17,9 @@ class CreateNikolagTransactionsTable extends Migration
             $table->increments('id');
             $table->string('status', 50);
             $table->string('amount');
+            $table->string('currency');
             $table->integer('customer_id')->unsigned()->nullable()->default(null);
+            $table->string('payment_service_id')->nullable();
             $table->string('payment_service_type', 25);
             $table->string('merchant_id')->nullable()->default(null);
             $table->string('order_id')->nullable()->default(null);

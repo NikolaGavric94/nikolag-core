@@ -26,7 +26,7 @@ with `nikolag` packages. First of all there are couple of important layers and s
 Configuration file is the most important here since it'll contain all of the required pre-set options of your library.
 The file must be called **nikolag.php** and it must be inside of **src/config** folder.
 
-```javascript
+```php
 return [
     /*
     |--------------------------------------------------------------------------
@@ -105,19 +105,19 @@ return [
 ];
 ```
 This is just a starter snippet which u can start adapting to your own library. There are couple of important `variables` that u gotta change and rules which you must follow.
-Change `{$default}` with the name of your package (paypal, payeer, payoneer, ...) and also include the fully qualified name (namespace) of your service instead of `{$namespace}`. You can check [nikolag.php](https://github.com/NikolaGavric94/nikolag-square/blob/master/src/config/nikolag.php) example of how config file should look like. 
-[SquareConfig.php](https://github.com/NikolaGavric94/nikolag-square/blob/master/src/SquareConfig.php) is the example of how your configuration class should look like.
+Change `{$default}` with the name of your package (paypal, payeer, payoneer, ...) and also include the fully qualified name (namespace) of your service instead of `{$namespace}`. You can check [nikolag.php](https://github.com/NikolaGavric94/laravel-square/blob/master/src/config/nikolag.php) example of how config file should look like. 
+[SquareConfig.php](https://github.com/NikolaGavric94/laravel-square/blob/master/src/SquareConfig.php) is the example of how your configuration class should look like.
 
 ### 2. Main service
 Your package must have at least 1 main service which is responsible for all communication between rest calls and your package. 
 It also must extend **Nikolag\Core\Abstracts\CorePaymentService** and it must implement **Nikolag\Core\Contracts\PaymentServiceContract** thats explained in the next step. 
-Example of that kind of class can be found [SquareService.php](https://github.com/NikolaGavric94/nikolag-square/blob/master/src/SquareService.php).
+Example of that kind of class can be found [SquareService.php](https://github.com/NikolaGavric94/laravel-square/blob/master/src/SquareService.php).
 
 ### 3. Dependency Injections
 Your library must have at least 1 contract which should be named `{$serviceName}ServiceContract.php` where `{$serviceName}` is the name of service you are trying to integrate with nikolag packages and Laravel 5.5. 
 Also it must extends **Nikolag\Core\Contracts\PaymentServiceContract**. 
 **Any other contract which is not connected with your service file in any way mustn't extend the above contract**. Some examples of such name are `PaypalServiceContract.php`, `PayeerServiceContract.php`, `PayoneerServiceContract.php`. 
-Example of the contract can be found [SquareContract.php](https://github.com/NikolaGavric94/nikolag-square/blob/master/src/contracts/SquareContract.php).
+Example of the contract can be found [SquareContract.php](https://github.com/NikolaGavric94/laravel-square/blob/master/src/contracts/SquareContract.php).
 
 ### 4. Migrations and Factories
 All migrations and factories must be under `src/database` folder and each of them respectively will have it's own subfolder `src/database/factories` and `src/database/migrations`. 
@@ -125,7 +125,7 @@ This core package already has couple of migrations so you don't have to write th
 
 ### 5. Facades
 All facades are found under `src/facades` and your package must have at least 1 facade which must be alias for your main service class. 
-```javascript
+```php
 //Facades
 $this->app->alias(SquareService::class, 'square');
 ```
@@ -134,7 +134,7 @@ $this->app->alias(SquareService::class, 'square');
 All models must be located under `src/models`. There are 2 core models: **Customer** and **Transaction**. 
 
 You must extend those 2 core models and create your own from them with all relationships available and also add
-```javascript
+```php
 /**
  * The model's attributes.
  *
@@ -147,7 +147,7 @@ protected $attributes = [
 ];
 ```
 The above is only required for 2 base models, any other models u might make don't have to extend anything and you can create them normally. 
-Example can be found [Customer.php](https://github.com/NikolaGavric94/nikolag-square/blob/master/src/models/Customer.php).
+Example can be found [Customer.php](https://github.com/NikolaGavric94/laravel-square/blob/master/src/models/Customer.php).
 
 ### 7. Providers
 You can register multiple providers and they should be named respectively for their role in the library. You can find them under src/providers folder. Here are some examples:
@@ -158,7 +158,7 @@ All traits must be under `src/traits`.
 
 ### 9. Tests
 All your tests must be under `tests` and they are split into 2 types: `integration` and `unit` where each of them has it's own subfolder. 
-```javascript
+```php
 src/
 tests/
   integration/
@@ -171,7 +171,7 @@ All your utility classes must be under `src/utils` folder.
 ## All available core methods
 
 ### CoreService
-```javascript
+```php
 /**
  * Returns instance of the specified service
  *
@@ -199,7 +199,7 @@ public function availableDrivers() {}
 **CoreService examples**
 
 Get access to the specific underyling driver for any installed payment API
-```javascript
+```php
 $squareAPI = Nikolag\Core\Facades\CoreService::use('square');
 $squareAPI->setCustomer($customer)->charge($options);
 
@@ -210,14 +210,14 @@ $myServiceAPI->setCustomer($customer)->charge($options);
 ```
 
 You can also charge the customer with your default driver
-```javascript
+```php
 $api = Nikolag\Core\Facades\CoreService::default();
 
 $api->setCustomer($customer)->charge($options);
 ```
 
 You can also list all available drivers
-```javascript
+```php
 $drivers = Nikolag\Core\Facades\CoreService::availableDrivers();
 
 echo json_decode(json_encode($drivers));
@@ -238,8 +238,8 @@ and label the request, whether it is an issue, bug or a feature. For any other
 enquiries send an email to nikola.gavric94@gmail.com
 
 ### Contributors
-| Name                                               | Changes                                                                                                                       | Date       |
-| -------------------------------------------------- |:-----------------------------------------------------------------------------------------------------------------------------:|:----------:|
+| Name                                         | Changes                                                                                              | Date       |
+| ---------------------------------------------|:----------------------------------------------------------------------------------------------------:|:----------:|
 | [@viangela84](https://github.com/viangela84) | Updated order_product table [pull request #3](https://github.com/NikolaGavric94/nikolag-core/pull/3) | 2017-02-07 |
 
 ## License

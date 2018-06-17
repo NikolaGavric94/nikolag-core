@@ -15,6 +15,11 @@ class CoreConfig
      */
     protected $config;
 
+    /**
+     * CoreConfig constructor.
+     *
+     * @throws InvalidConfigurationException
+     */
     public function __construct()
     {
         $this->config = config('nikolag');

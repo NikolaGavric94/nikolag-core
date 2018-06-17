@@ -1,6 +1,6 @@
 {
     "name": "nikolag/core",
-    "description": "Nikolag Core package for Laravel",
+    "description": "Nikolag Core package for Laravel payment integrations that are not part of the Cashier",
     "keywords": ["payments", "laravel", "payments laravel integration", "finances"],
     "license": "MIT",
     "type": "laravel-package",
@@ -45,7 +45,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.0.x-dev"
+            "dev-master": "2.1.x-dev"
         },
         "laravel": {
             "providers": [

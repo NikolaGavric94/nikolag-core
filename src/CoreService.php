@@ -20,7 +20,7 @@ class CoreService extends CoreConfig
      *
      * @param string $driver
      *
-     * @return Nikolag\Core\Contracts\PaymentServiceContract
+     * @return \Nikolag\Core\Contracts\PaymentServiceContract
      */
     public function use(string $driver)
     {
@@ -30,7 +30,7 @@ class CoreService extends CoreConfig
     /**
      * Returns instance of the default service.
      *
-     * @return Nikolag\Core\Contracts\PaymentServiceContract
+     * @return \Nikolag\Core\Contracts\PaymentServiceContract
      */
     public function default()
     {
