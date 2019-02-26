@@ -27,7 +27,7 @@ class CreateNikolagProductsTable extends Migration
         Schema::table('nikolag_products', function (Blueprint $table) {
             $table->index('name');
             $table->index('reference_id');
-            $table->unique(['name', 'variation_name']);
+            $table->unique(['name', 'variation_name'], 'vname_name');
         });
     }
 

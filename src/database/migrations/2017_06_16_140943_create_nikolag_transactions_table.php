@@ -18,7 +18,7 @@ class CreateNikolagTransactionsTable extends Migration
             $table->string('status', 50);
             $table->string('amount');
             $table->string('currency');
-            $table->integer('customer_id')->unsigned()->nullable()->default(null);
+            $table->unsignedInteger('customer_id')->nullable()->default(null);
             $table->string('payment_service_id')->nullable();
             $table->string('payment_service_type', 25);
             $table->string('merchant_id')->nullable()->default(null);
@@ -29,7 +29,7 @@ class CreateNikolagTransactionsTable extends Migration
         Schema::table('nikolag_transactions', function (Blueprint $table) {
             $table->index('status');
             $table->index('payment_service_type');
-            $table->foreign('customer_id')->references('id')->on('nikolag_customers');
+            $table->foreign('customer_id', 'cus_id')->references('id')->on('nikolag_customers');
         });
     }
 

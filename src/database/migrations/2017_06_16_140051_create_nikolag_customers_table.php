@@ -28,7 +28,7 @@ class CreateNikolagCustomersTable extends Migration
         });
 
         Schema::table('nikolag_customers', function (Blueprint $table) {
-            $table->unique(['payment_service_type', 'payment_service_id']);
+            $table->unique(['payment_service_type', 'payment_service_id'], 'pstype_psid');
             $table->index('email');
         });
     }

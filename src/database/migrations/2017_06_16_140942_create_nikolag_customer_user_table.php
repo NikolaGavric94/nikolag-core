@@ -15,11 +15,11 @@ class CreateNikolagCustomerUserTable extends Migration
     {
         Schema::create('nikolag_customer_user', function (Blueprint $table) {
             $table->string('owner_id');
-            $table->integer('customer_id')->unsigned();
+            $table->unsignedInteger('customer_id');
         });
 
         Schema::table('nikolag_customer_user', function (Blueprint $table) {
-            $table->unique(['owner_id', 'customer_id']);
+            $table->unique(['owner_id', 'customer_id'], 'oid_cid');
         });
     }
 

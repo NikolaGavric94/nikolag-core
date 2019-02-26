@@ -26,7 +26,7 @@ class CreateNikolagTaxesTable extends Migration
         Schema::table('nikolag_taxes', function (Blueprint $table) {
             $table->index('name');
             $table->index('type');
-            $table->unique(['name', 'type']);
+            $table->unique(['name', 'type'], 'name_type');
         });
     }
 
