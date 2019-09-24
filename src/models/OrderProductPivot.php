@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Relations\MorphPivot;
 class OrderProductPivot extends MorphPivot
 {
     /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = true;
+
+    /**
      * The table associated with the model.
      *
      * @var string
