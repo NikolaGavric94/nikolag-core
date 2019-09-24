@@ -48,9 +48,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Code cleanup
 - Updated `DRIVERS.md, README.md, composer.json`
 
+## [2.1.1] - 2019-02-26
+### Fixed
+- Rewrite column indices to be < 797 bytes to conform with older MySQL/MariaDB drivers
+
+## [2.2.0] - 2019-09-24
+### Added
+- Support for Laravel 5.8 & Laravel 6.x
+### Changed
+- Updated code docs for PaymentServiceContract
+
 [Unreleased]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.1.0...HEAD
 [1.1.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/NikolaGavric94/nikolag-core/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/NikolaGavric94/nikolag-core/compare/v1.0.0...v1.0.1
 [2.0.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v1.0.1...v2.0.0
 [2.1.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.0.0...v2.1.0
+[2.1.1]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.1.0...v2.1.1
+[2.2.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.1.1...v2.2.0
