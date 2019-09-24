@@ -7,7 +7,7 @@ interface PaymentServiceContract
     /**
      * Save a transaction.
      *
-     * @return void
+     * @return self
      */
     public function save();
 
@@ -45,7 +45,7 @@ interface PaymentServiceContract
      *
      * @param mixed $customer
      *
-     * @return void
+     * @return self
      */
     public function setCustomer($customer);
 
