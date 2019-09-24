@@ -11,13 +11,13 @@
     }],
     "require": {
         "php": ">=7.0.0",
-        "illuminate/support": "~5.5|~5.6",
-        "illuminate/config": "~5.5|~5.6",
-        "illuminate/console": "~5.5|~5.6",
-        "illuminate/contracts": "~5.5|~5.6",
-        "illuminate/container": "~5.5|~5.6",
-        "illuminate/database": "~5.5|~5.6",
-        "illuminate/filesystem": "~5.5|~5.6"
+        "illuminate/support": "~5.5|~5.6|~5.7|~5.8|~6.0",
+        "illuminate/config": "~5.5|~5.6|~5.7|~5.8|~6.0",
+        "illuminate/console": "~5.5|~5.6|~5.7|~5.8|~6.0",
+        "illuminate/contracts": "~5.5|~5.6|~5.7|~5.8|~6.0",
+        "illuminate/container": "~5.5|~5.6|~5.7|~5.8|~6.0",
+        "illuminate/database": "~5.5|~5.6|~5.7|~5.8|~6.0",
+        "illuminate/filesystem": "~5.5|~5.6|~5.7|~5.8|~6.0"
     },
     "autoload": {
         "psr-4": {
@@ -47,7 +47,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.x-dev"
+            "dev-master": "2.2.x-dev"
         },
         "laravel": {
             "providers": [
