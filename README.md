@@ -67,6 +67,7 @@ return [
         'namespace' => '{$namespace}',
         'application_id' => env('{$default}_APPLICATION_ID'),
         'access_token' => env('{$default}_TOKEN'),
+        'sandbox' => env('{$default}_SANDBOX', false),
 
         /*
         |--------------------------------------------------------------------------
@@ -245,7 +246,7 @@ enquiries send an email to nikola.gavric94@gmail.com
 ## License
 MIT License
 
-Copyright (c) 2018
+Copyright (c) Nikola Gavrić <nikola.gavric94@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
