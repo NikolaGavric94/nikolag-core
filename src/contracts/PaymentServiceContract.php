@@ -23,15 +23,13 @@ interface PaymentServiceContract
     public function charge(array $options);
 
     /**
-     * Transactions directly from Square API.
+     * Get all payments from service provider
      *
      * @param array $options
      *
-     * @throws \Nikolag\Core\Exceptions\Exception on non-2xx response
-     *
-     * @return \SquareConnect\Model\ListLocationsResponse
+     * @return mixed
      */
-    public function transactions(array $options);
+    public function payments(array $options);
 
     /**
      * Getter for customer.
