@@ -2,6 +2,7 @@
 
 namespace Nikolag\Core\Abstracts;
 
+use Nikolag\Core\Contracts\CoreConfigContract;
 use Nikolag\Core\Traits\Arrayable;
 use Nikolag\Core\Traits\Jsonable;
 
@@ -12,19 +13,19 @@ abstract class CorePaymentService
     /**
      * @var mixed
      */
-    protected mixed $customer;
+    protected mixed $customer = null;
     /**
      * @var mixed
      */
-    protected mixed $merchant;
+    protected mixed $merchant = null;
     /**
      * @var mixed
      */
-    protected mixed $order;
+    protected mixed $order = null;
     /**
-     * @var array
+     * @var CoreConfigContract
      */
-    protected array $config;
+    protected CoreConfigContract $config;
 
     /**
      * @return mixed
@@ -75,19 +76,19 @@ abstract class CorePaymentService
     }
 
     /**
-     * @return array
+     * @return CoreConfigContract
      */
-    public function getConfig(): array
+    public function getConfig(): CoreConfigContract
     {
         return $this->config;
     }
 
     /**
-     * @param array $config
+     * @param CoreConfigContract $config
      *
      * @return self
      */
-    public function setConfig(array $config): static
+    public function setConfig(CoreConfigContract $config): static
     {
         $this->config = $config;
 

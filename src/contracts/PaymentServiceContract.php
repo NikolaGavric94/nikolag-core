@@ -2,6 +2,9 @@
 
 namespace Nikolag\Core\Contracts;
 
+use Nikolag\Core\Exceptions\Exception;
+use Nikolag\Core\Models\Transaction;
+
 interface PaymentServiceContract
 {
     /**
@@ -9,18 +12,18 @@ interface PaymentServiceContract
      *
      * @return self
      */
-    public function save();
+    public function save(): PaymentServiceContract;
 
     /**
      * Charge a customer.
      *
      * @param array $options
      *
-     * @throws \Nikolag\Core\Exceptions\Exception on non-2xx response
+     * @throws Exception on non-2xx response
      *
-     * @return \Nikolag\Core\Models\Transaction
+     * @return Transaction
      */
-    public function charge(array $options);
+    public function charge(array $options): Transaction;
 
     /**
      * Get all payments from service provider.
@@ -29,60 +32,60 @@ interface PaymentServiceContract
      *
      * @return mixed
      */
-    public function payments(array $options);
+    public function payments(array $options): mixed;
 
     /**
      * Getter for customer.
      *
      * @return mixed
      */
-    public function getCustomer();
+    public function getCustomer(): mixed;
 
     /**
      * Setter for customer.
      *
      * @param mixed $customer
      *
-     * @return self
+     * @return PaymentServiceContract
      */
-    public function setCustomer($customer);
+    public function setCustomer(mixed $customer): static;
 
     /**
      * Getter for customer.
      *
      * @return mixed
      */
-    public function getMerchant();
+    public function getMerchant(): mixed;
 
     /**
      * Setter for merchant.
      *
      * @param mixed $merchant
      *
-     * @return mixed
+     * @return PaymentServiceContract
      */
-    public function setMerchant($merchant);
+    public function setMerchant(mixed $merchant): static;
 
     /**
      * Getter for order.
      *
      * @return mixed
      */
-    public function getOrder();
+    public function getOrder(): mixed;
 
     /**
      * Getter for config.
      *
-     * @return array
+     * @return CoreConfigContract
      */
-    public function getConfig();
+    public function getConfig(): CoreConfigContract;
 
     /**
      * Setter for config.
      *
-     * @param array $config
+     * @param CoreConfigContract $config
      *
-     * @return void
+     * @return PaymentServiceContract
      */
-    public function setConfig(array $config);
+    public function setConfig(CoreConfigContract $config): static;
 }

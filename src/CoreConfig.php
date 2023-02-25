@@ -14,7 +14,7 @@ class CoreConfig implements CoreConfigContract
     /**
      * @var array
      */
-    protected mixed $config;
+    protected array $config;
 
     /**
      * CoreConfig constructor.
@@ -30,14 +30,14 @@ class CoreConfig implements CoreConfigContract
     /**
      * Check validity of configuration file.
      *
-     * @param mixed $config
+     * @param array $config
      *
      * @throws InvalidConfigurationException if the config provided is empty or not
      *                                       complete
      *
      * @return void
      */
-    final public function checkConfigValidity($config): void
+    final public function checkConfigValidity(array $config): void
     {
         if (empty($config)) {
             throw new InvalidConfigurationException(
