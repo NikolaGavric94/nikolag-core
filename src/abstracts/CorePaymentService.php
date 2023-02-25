@@ -7,30 +7,29 @@ use Nikolag\Core\Traits\Jsonable;
 
 abstract class CorePaymentService
 {
-    use Arrayable;
-    use Jsonable;
+    use Arrayable, Jsonable;
 
     /**
      * @var mixed
      */
-    protected $customer;
+    protected mixed $customer;
     /**
      * @var mixed
      */
-    protected $merchant;
+    protected mixed $merchant;
     /**
      * @var mixed
      */
-    protected $order;
+    protected mixed $order;
     /**
      * @var array
      */
-    protected $config;
+    protected array $config;
 
     /**
      * @return mixed
      */
-    public function getCustomer()
+    public function getCustomer(): mixed
     {
         return $this->customer;
     }
@@ -40,7 +39,7 @@ abstract class CorePaymentService
      *
      * @return self
      */
-    public function setCustomer($customer)
+    public function setCustomer(mixed $customer): static
     {
         $this->customer = $customer;
 
@@ -50,7 +49,7 @@ abstract class CorePaymentService
     /**
      * @return mixed
      */
-    public function getMerchant()
+    public function getMerchant(): mixed
     {
         return $this->merchant;
     }
@@ -60,7 +59,7 @@ abstract class CorePaymentService
      *
      * @return self
      */
-    public function setMerchant($merchant)
+    public function setMerchant(mixed $merchant): static
     {
         $this->merchant = $merchant;
 
@@ -70,7 +69,7 @@ abstract class CorePaymentService
     /**
      * @return mixed
      */
-    public function getOrder()
+    public function getOrder(): mixed
     {
         return $this->order;
     }
@@ -78,7 +77,7 @@ abstract class CorePaymentService
     /**
      * @return array
      */
-    public function getConfig()
+    public function getConfig(): array
     {
         return $this->config;
     }
@@ -88,7 +87,7 @@ abstract class CorePaymentService
      *
      * @return self
      */
-    public function setConfig(array $config)
+    public function setConfig(array $config): static
     {
         $this->config = $config;
 

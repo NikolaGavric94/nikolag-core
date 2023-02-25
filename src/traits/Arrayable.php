@@ -9,7 +9,7 @@ trait Arrayable
      *
      * @return object
      */
-    public function getConfigAsArray()
+    public function getConfigAsArray(): object
     {
         return (object) $this->config;
     }

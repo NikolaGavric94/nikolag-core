@@ -2,12 +2,14 @@
 
 namespace Nikolag\Core;
 
+use Nikolag\Core\Contracts\PaymentServiceContract;
+
 class CoreService extends CoreConfig
 {
     /**
      * @var array
      */
-    private $drivers;
+    private array $drivers;
 
     public function __construct()
     {
@@ -20,9 +22,9 @@ class CoreService extends CoreConfig
      *
      * @param string $driver
      *
-     * @return \Nikolag\Core\Contracts\PaymentServiceContract
+     * @return PaymentServiceContract
      */
-    public function use(string $driver)
+    public function use(string $driver): PaymentServiceContract
     {
         return resolve($this->drivers->{$driver}->namespace);
     }
@@ -30,9 +32,9 @@ class CoreService extends CoreConfig
     /**
      * Returns instance of the default service.
      *
-     * @return \Nikolag\Core\Contracts\PaymentServiceContract
+     * @return PaymentServiceContract
      */
-    public function default()
+    public function default(): PaymentServiceContract
     {
         return resolve($this->drivers->{$this->getConfigAsJson()->default}->namespace);
     }
@@ -43,7 +45,7 @@ class CoreService extends CoreConfig
      *
      * @return array
      */
-    public function availableDrivers()
+    public function availableDrivers(): array
     {
         return array_keys($this->drivers);
     }

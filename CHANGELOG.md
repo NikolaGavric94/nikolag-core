@@ -69,6 +69,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [2.5.0] - 2020-03-22
 ### Added
 - Support for Laravel 8
+- 
+## [2.6.0] - 2023-02-25
+### Added
+- Support for Laravel 9
+- Support for PHP8 and above
 
 [Unreleased]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.1.0...HEAD
 [1.1.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v1.0.2...v1.1.0
@@ -81,3 +86,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 [2.3.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.2.0...v2.3.0
 [2.4.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.3.0...v2.4.0
 [2.5.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.4.0...v2.5.0
+[2.6.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.5.0...v2.6.0

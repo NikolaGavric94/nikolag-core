@@ -2,19 +2,19 @@
 
 namespace Nikolag\Core;
 
+use Nikolag\Core\Contracts\CoreConfigContract;
 use Nikolag\Core\Exceptions\InvalidConfigurationException;
 use Nikolag\Core\Traits\Arrayable;
 use Nikolag\Core\Traits\Jsonable;
 
-class CoreConfig
+class CoreConfig implements CoreConfigContract
 {
-    use Arrayable;
-    use Jsonable;
+    use Arrayable, Jsonable;
 
     /**
      * @var array
      */
-    protected $config;
+    protected mixed $config;
 
     /**
      * CoreConfig constructor.
@@ -37,9 +37,9 @@ class CoreConfig
      *
      * @return void
      */
-    final public function checkConfigValidity($config)
+    final public function checkConfigValidity($config): void
     {
-        if (empty($config) || !isset($config)) {
+        if (empty($config)) {
             throw new InvalidConfigurationException(
                 'Configuration file is missing or not complete',
                 500

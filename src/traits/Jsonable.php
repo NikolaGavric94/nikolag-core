@@ -9,7 +9,7 @@ trait Jsonable
      *
      * @return object
      */
-    public function getConfigAsJson()
+    public function getConfigAsJson(): object
     {
         return json_decode(json_encode($this->config));
     }
