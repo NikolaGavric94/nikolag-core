@@ -79,6 +79,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Minor refactoring and adaptations to PHP8
 
+## [2.7.0] - 2023-04-01
+### Added
+- Support for illuminate 10 (laravel & lumen)
+
 [Unreleased]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.1.0...HEAD
 [1.1.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/NikolaGavric94/nikolag-core/compare/v1.0.1...v1.0.2
@@ -92,3 +96,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 [2.5.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.4.0...v2.5.0
 [2.6.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.5.0...v2.6.0
 [2.6.1]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.6.0...v2.6.1
+[2.7.0]: https://github.com/NikolaGavric94/nikolag-core/compare/v2.6.1...v2.7.0
