@@ -21,16 +21,6 @@ class Discount extends Model
     public $timestamps = true;
 
     /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = [
-        'created_at',
-        'updated_at',
-    ];
-
-    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -46,6 +36,8 @@ class Discount extends Model
      */
     protected $casts = [
         'amount' => 'integer',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime'
     ];
 
     /**
