@@ -3,7 +3,7 @@
 namespace Nikolag\Core\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use \Nikolag\Core\CoreService as CoreServiceConcrete;
+use Nikolag\Core\CoreService as CoreServiceConcrete;
 
 class CoreService extends Facade
 {

@@ -9,7 +9,8 @@ use Nikolag\Core\Traits\Jsonable;
 
 class CoreConfig implements CoreConfigContract
 {
-    use Arrayable, Jsonable;
+    use Arrayable;
+    use Jsonable;
 
     /**
      * @var array

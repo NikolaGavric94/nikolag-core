@@ -37,7 +37,7 @@ class Tax extends Model
     protected $casts = [
         'percentage' => 'float',
         'created_at' => 'datetime',
-        'updated_at' => 'datetime'
+        'updated_at' => 'datetime',
     ];
 
     /**

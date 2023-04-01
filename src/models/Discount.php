@@ -35,9 +35,9 @@ class Discount extends Model
      * @var array
      */
     protected $casts = [
-        'amount' => 'integer',
+        'amount'     => 'integer',
         'created_at' => 'datetime',
-        'updated_at' => 'datetime'
+        'updated_at' => 'datetime',
     ];
 
     /**
