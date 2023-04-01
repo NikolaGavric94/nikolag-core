@@ -8,7 +8,8 @@ use Nikolag\Core\Traits\Jsonable;
 
 abstract class CorePaymentService
 {
-    use Arrayable, Jsonable;
+    use Arrayable;
+    use Jsonable;
 
     /**
      * @var mixed

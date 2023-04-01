@@ -35,9 +35,9 @@ class Product extends Model
      * @var array
      */
     protected $casts = [
-        'price' => 'float',
+        'price'      => 'float',
         'created_at' => 'datetime',
-        'updated_at' => 'datetime'
+        'updated_at' => 'datetime',
     ];
 
     /**
