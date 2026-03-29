@@ -11,13 +11,13 @@
     }],
     "require": {
         "php": ">=8.2",
-        "illuminate/support": "12.x",
-        "illuminate/config": "12.x",
-        "illuminate/console": "12.x",
-        "illuminate/contracts": "12.x",
-        "illuminate/container": "12.x",
-        "illuminate/database": "12.x",
-        "illuminate/filesystem": "12.x"
+        "illuminate/support": "13.x",
+        "illuminate/config": "13.x",
+        "illuminate/console": "13.x",
+        "illuminate/contracts": "13.x",
+        "illuminate/container": "13.x",
+        "illuminate/database": "13.x",
+        "illuminate/filesystem": "13.x"
     },
     "autoload": {
         "psr-4": {
